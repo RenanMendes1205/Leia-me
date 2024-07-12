@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>leia-me</title>
+</head>
+
+<body>
+    <div id="conteudo">
+        <h1>Aceita namorar comigo?</h1>
+        <button onclick="sim()">SIM</button>
+        <button onclick= "desvia()"onmouseover="desvia()">NÃO</button>
+    </div>
+</body>
+<style>
+    #conteudo {
+        background: red;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 50px;
+        text-align: center;
+    }
+</style>
+
+<script>
+    function sim() {
+        alert("Você aceitou namorar comigo, eu te amo e prometo te fazer feliz!❤️ ")
+    }
+
+    function desvia() {
+        var btn = document.querySelector("#conteudo > button:nth-child(3)");
+        console.log("opa, desviou...")
+        btn.style.position = 'absolute';
+        btn.style.top = geraposicao(0, 50);
+        btn.style.right = geraposicao(0, 50);
+        
+    }
+
+    function geraposicao(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min + "%";
+}
+ 
+</script>
+
+
+</html>
